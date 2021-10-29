@@ -5,3 +5,4 @@ target
 .gradel
 *.war
 *.bak
+/.metadata/
