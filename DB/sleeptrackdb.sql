@@ -23,6 +23,10 @@ DROP TABLE IF EXISTS `sleep` ;
 CREATE TABLE IF NOT EXISTS `sleep` (
   `id` INT NOT NULL AUTO_INCREMENT,
   `day` VARCHAR(45) NOT NULL,
+  `sleep_duration` DOUBLE NOT NULL,
+  `desired_sleep_time` DOUBLE NOT NULL,
+  `created_at` DATETIME NOT NULL,
+  `updated_at` DATETIME NOT NULL,
   PRIMARY KEY (`id`))
 ENGINE = InnoDB;
 
@@ -42,7 +46,7 @@ SET UNIQUE_CHECKS=@OLD_UNIQUE_CHECKS;
 -- -----------------------------------------------------
 START TRANSACTION;
 USE `tracksleepdb`;
-INSERT INTO `sleep` (`id`, `day`) VALUES (1, 'Monday');
+INSERT INTO `sleep` (`id`, `day`, `sleep_duration`, `desired_sleep_time`, `created_at`, `updated_at`) VALUES (1, 'Monday', 8, 8, '2021-10-29', '2021-10-29');
 
 COMMIT;
 

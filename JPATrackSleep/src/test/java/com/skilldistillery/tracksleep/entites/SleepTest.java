@@ -2,6 +2,8 @@ package com.skilldistillery.tracksleep.entites;
 
 import static org.junit.jupiter.api.Assertions.*;
 
+import java.time.LocalDateTime;
+
 import javax.persistence.EntityManager;
 import javax.persistence.EntityManagerFactory;
 import javax.persistence.Persistence;
@@ -48,6 +50,10 @@ class SleepTest {
 	void test() {
 		assertNotNull(sleep);
 		assertEquals("Monday", sleep.getDay());
+//		assertEquals("8.0", sleep.getSleepDuration());
+//		assertEquals("desired_sleep_time", sleep.getDesiredSleepTime());
+//		assertEquals(LocalDateTime.of(2021, 29, 10, 00, 00), sleep.getCreatedAt());
+//		assertEquals(LocalDateTime.of(2021, 29, 10, 00, 00), sleep.getUpdatedAt());
 	}
 
 }
