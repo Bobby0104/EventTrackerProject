@@ -50,10 +50,10 @@ class SleepTest {
 	void test() {
 		assertNotNull(sleep);
 		assertEquals("Monday", sleep.getDay());
-//		assertEquals("8.0", sleep.getSleepDuration());
-//		assertEquals("desired_sleep_time", sleep.getDesiredSleepTime());
-//		assertEquals(LocalDateTime.of(2021, 29, 10, 00, 00), sleep.getCreatedAt());
-//		assertEquals(LocalDateTime.of(2021, 29, 10, 00, 00), sleep.getUpdatedAt());
+		assertEquals(9.0, sleep.getSleepDuration());
+		assertEquals(8.0, sleep.getDesiredSleepTime());
+		assertEquals(LocalDateTime.of(2021, 11, 01, 14, 36, 49), sleep.getCreatedAt());
+//	    assertEquals(LocalDateTime.of(2021, 10, 29, 00, 00), sleep.getUpdatedAt());
 	}
 
 }
