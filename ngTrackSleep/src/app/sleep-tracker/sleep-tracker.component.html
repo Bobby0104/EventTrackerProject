@@ -5,13 +5,14 @@
   <h1>Sleep Tracker</h1>
 
 
-  <table class="table table-striped table-hover">
-    <thead class="table-dark">
+  <table class="table table-active">
+    <thead class="table-info">
       <tr>
         <th>Id</th>
         <th>Day</th>
         <th>Sleep Duration</th>
         <th>Desired Sleep Time</th>
+        <th></th>
       </tr>
     </thead>
     <tbody>
@@ -25,33 +26,28 @@
     </tbody>
   </table>
 
-  <div *ngIf="!selected">
-    <button (click)="addSleep(newSleep)" type="button" class="btn btn-primary">Add Sleep</button>
-    <!-- <button (click)="updateSleep(newSleep, true)" type="button" class="btn btn-primary">Update Sleep</button> -->
-  </div>
 
 
 
-
-  <div *ngIf="editSleep" class="container shadow-lg p-3 mb-5 bg-body rounded">
+  <div class="container shadow-lg p-3 mb-5 bg-body rounded">
     <h1 align="center">Let's track your sleep </h1>
     <form>
 
   <div class="mb-3">
     <label for="formGroupExampleInput2" class="form-label fs-5">Day:</label>
-    <input type="text" class="date form-control" id="formGroupExampleInput2" placeholder="Ex: 09/12/2021" name="day" [(ngModel)]="editSleep.day">
+    <input type="text" class="date form-control" id="formGroupExampleInput2" placeholder="Ex: 09/12/2021" name="day">
   </div>
 
   <div class="mb-3">
     <label for="formGroupExampleInput" class="form-label fs-5">Time Slept:</label>
-    <input type="number" class="form-control" id="formGroupExampleInput" placeholder="" name="sleepDuration" [(ngModel)]="editSleep.sleepDuration">
+    <input type="number" class="form-control" id="formGroupExampleInput" placeholder="" name="sleepDuration" >
   </div>
 
   <div class="mb-3">
     <label for="formGroupExampleInput2" class="form-label fs-5">Desired Time Slept: </label>
-    <input type="number" class="form-control" id="formGroupExampleInput2" placeholder="" name="desiredSleepTime" [(ngModel)]="editSleep.desiredSleepTime">
+    <input type="number" class="form-control" id="formGroupExampleInput2" placeholder="" name="desiredSleepTime">
   </div>
-      <button type="submit" class="btn btn-primary" (click)="updateSleep(newSleep)">Submit</button>
+      <button type="submit" class="btn btn-primary" (click)="addSleep(newSleep)">Add Sleep</button>
     </form>
   </div>
 </main>

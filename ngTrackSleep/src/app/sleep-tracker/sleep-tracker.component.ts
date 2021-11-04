@@ -11,7 +11,7 @@ export class SleepTrackerComponent implements OnInit {
 
   sleepTracked: Sleep[] = [];
   selected: Sleep | null = null;
-  newSleep: Sleep = new Sleep(0, '', 0, 0);
+  newSleep: Sleep = new Sleep();
   editSleep: Sleep | null = null;
 
   constructor(private sleepService: SleepTrackerService) { }
@@ -39,7 +39,7 @@ export class SleepTrackerComponent implements OnInit {
     this.sleepService.create(sleep).subscribe(
       // (success) = {
       //   this.loadSleepTracked();
-      //   this.sleep = new Sleep(0, '', 0, 0);
+      //   this.sleep = new Sleep();
       //   console.log('SleepTracked.addSleep(): new sleep successfully created');
       // },
       (err) => {
